@@ -1,0 +1,29 @@
+<section id="create">
+    <div class="container flex-stretch">
+        <div class="vertical-center h-center w-horz ">
+                <h1 id="title-banner">Crear un Artículo</h1>            
+        </div>
+    </div>    
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <%= form_for(@article) do |f| %>
+                    <div class="field">
+                        <%=f.text_field :title, placeholder: "Escribe un Título", class: "form-control"%>                        
+                    </div>
+                    <div class="field">
+                        <%=f.text_area :body, placeholder: "Escribe un Artículo" , style: "height:300px", class: "form-control" %>                        
+                    </div>
+                    <div class="field">
+                        <%=f.submit "Guardar", class:"btn btn-danger"  %>                        
+                    </div>
+                
+                <% end %>
+                   
+            </div>        
+        </div>    
+    </div>
+    
+</section>
